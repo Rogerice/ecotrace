@@ -11,7 +11,7 @@ const getToday = () => {
   const date = new Date(), y=date.getFullYear(), m=String(date.getMonth()+1).padStart(2,'0'),d=String(date.getDate()).padStart(2,'0')
   return `${y}-${m}-${d}`
 }
-const initial = ():MovementDraft => ({createdAt:getToday(),generator:DEMO_COMPANY,transporter:'',destination:'',driver:'',vehicle:'',wasteType:'',group:'Classe II A – Não inerte',treatment:'',quantity:0,invoice:'',observations:''})
+const initial = ():MovementDraft => ({createdAt:getToday(),generator:DEMO_COMPANY,transporter:'',destination:'',driver:'',vehicle:'',wasteType:'',group:'Classe II A – Não inerte',treatment:'' as Treatment,quantity:0,invoice:'',observations:''})
 
 export default function IssueDocument() {
   const navigate = useNavigate()
