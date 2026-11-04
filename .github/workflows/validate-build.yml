@@ -1,4 +1,5 @@
 name: Validate EcoTrace build
+# Recheck after fixing the form's empty-selection type
 on:
   push:
     branches: [main]
